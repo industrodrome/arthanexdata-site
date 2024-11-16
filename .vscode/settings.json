@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
         "Arthanex"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
 }

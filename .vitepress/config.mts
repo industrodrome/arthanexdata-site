@@ -8,19 +8,58 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Datasets", link: "/datasets" }, 
+      { text: "Datasets", link: "/datasets" },
       { text: "Contact", link: "/contact" },
     ],
 
-    sidebar: [
-      {
-        text: "Examples",
+    sidebar: {
+      "/datasets": {
+        base: "/datasets/",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          {
+            text: "Datasets",
+            items: [
+              {
+                text: "Bhav",
+                link: "/bhav",
+                collapsed: true,
+                items: [
+                  { text: "NSE", link: "/nse" },
+                  { text: "BSE", link: "/bse" },
+                ],
+              },
+              {
+                text: "Stock Symbols",
+                link: "/bhav",
+                collapsed: true,
+                items: [
+                  { text: "NSE", link: "/nse" },
+                  { text: "BSE", link: "/bse" },
+                ],
+              },
+              {
+                text: "Index Constituents",
+                link: "/bhav",
+                collapsed: true,
+                items: [
+                  { text: "NSE Indices", link: "/nse" },
+                  { text: "BSE Indices", link: "/bse" },
+                ],
+              },
+              {
+                text: "Company Information",
+                link: "/company",
+                collapsed: true,
+                items: [
+                  { text: "Source: NSE", link: "/nse" },
+                  { text: "Source: MoneyControl", link: "/bse" },
+                ],
+              },
+            ],
+          },
         ],
       },
-    ],
+    },
 
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
